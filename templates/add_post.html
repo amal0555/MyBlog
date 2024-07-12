@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Add Post {% endblock %}
+
+{% block content %}
+
+<div class="addpost">
+<h3 style="font-weight: bold;">Add Post</h3>
+<form method="POST" action="{{url_for('add_post')}}">
+<label for="title">Title</label>
+<input type="text" name="title" id="title" placeholder="Enter Title">
+<br>
+<br>
+<label for="author">Author</label>
+<input type="text" name="author" id="author" placeholder="Enter Author">
+<br>
+<br>
+<label for="content">Content</label>
+<textarea type="text" name="content" id="content" placeholder="Enter Content"></textarea>
+<br>
+<br>
+<div class="center">
+<input type="submit">
+</div>
+</form>
+
+</div>
+{% endblock %}
